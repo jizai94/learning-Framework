@@ -1,0 +1,18 @@
+优化1: 为首页添加下拉刷新
+
+iscroll
+判断两个对象是否相等
+模块化
+angularjs（backbonejs）
+javascript事件的问题（例如监听DOM结构的变化）
+滚动条的处理
+
+
+padding的相关测试
+top,bottom,left,right的拉伸作用（就相当于定一个点然后拉伸）
+~~：可以将数组转换为整数
+Date.now():获得时间戳
+移动端写一般不设置宽，只设置高
+
+
+li标签设为inline-block状态下每个li标签都会有空隙，解决方法：通过设置font-size:0的方式解决
