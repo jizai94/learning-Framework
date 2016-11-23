@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-model指令的使用</title>
+	<script type="text/javascript" src="../angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+	名字：<input type="text" ng-model="name">
+	证件号：<input type="text" ng-model="num">
+	<p>名字：{{ name }}</p>
+	<p>证件号：{{ num }}</p>
+</div>
+<script>
+	var app = angular.module("myApp", []);
+	app.controller("myCtrl", function ($scope) {
+		$scope.name = "jizai";
+		$scope.num = "441481199407284839";
+	});
+</script>
+</body>
+</html>

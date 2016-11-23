@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义指令</title>
+	<script type="text/javascript" src="../angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<my-directive></my-directive>
+
+	<div my-directive></div>
+
+	<div class="my-directive"></div>
+
+	<!-- directive: my-directive -->
+
+	<script>
+		var app = angular.module("myApp",[]);
+		app.directive("myDirective", function () {
+			return {
+				restrict: "EACM",
+				replace: true,
+				template: "<h1>创建的自定义指令</h1>"
+			}
+		});
+	</script>
+</body>
+</html>

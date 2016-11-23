@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>重复HTML元素</title>
+	<script type="text/javascript" src="../angular.min.js"></script>
+</head>
+<body>
+	<!--<div ng-app="" ng-init="names=['基仔','基屁屁','基哥']">
+		<p>使用 ng-repeat 来循环数组</p>
+		<ul>
+			<li ng-repeat="x in names">
+				{{ x }}
+			</li>
+		</ul>
+	</div>-->
+
+	<div ng-app="" ng-init="name=[
+	{name:'基仔',country:'中国'},
+	{name:'基屁屁',country:'广东'},
+	{name:'基哥',country:'梅州'}]">
+		<p>循环对象：</p>
+		<ul>
+			<li ng-repeat="x in name">
+				{{ "名字："+ x.name + " " + "国家/城市：" + x.country }}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
