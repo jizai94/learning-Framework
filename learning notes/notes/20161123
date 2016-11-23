@@ -1,0 +1,17 @@
+
+选择器 ::selection(Firefox使用 ::-moz-selection)
+作用：被选取的部分(只能向 ::selection 选择器应用少量 CSS 属性：color、background、cursor 以及 outline)
+
+css属性text-size-adjust(-webkit-text-size-adjust)
+作用：text-size-adjust：auto(默认) | none | <percentage>
+auto：文本大小根据设备尺寸进行调整。
+none：文本大小不会根据设备尺寸进行调整。
+<percentage>：用百分比来指定文本大小在设备尺寸不同的情况下如何调整。
+默认网页字体最小为12px，可以通过修改此属性的值为none，可以设置更小字号的字体。
+
+width 与 _width 的区别(后者用于设置IE早期的宽，从而实现与其他浏览器相同的效果)
+因为 IE 设置css的 width 时的值为(内容框 + 内边距 + 边框)
+
+history h5 新的api的学习
+
+闭包的学习
