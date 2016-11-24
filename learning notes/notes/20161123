@@ -15,3 +15,29 @@ width 与 _width 的区别(后者用于设置IE早期的宽，从而实现与其
 history h5 新的api的学习
 
 闭包的学习
+
+window document jQuery 相关宽高说明
+window对象
+//以下四个属性会跟着浏览器窗口大小的变化而跟着变化
+window.innerHeight          ：可视区域内（就是浏览器有网页显示的地方）的高度（包括滚动条）
+window.innerWidth           ：可视区域内（就是浏览器有网页显示的地方）的宽度（包括滚动条）
+window.outerHeight          ：浏览器界面的高度
+window.outerWidth           ：浏览器界面的宽度
+//以下四个属性会跟着浏览器的移动而跟着变化
+window.screenY              ：浏览器窗口距离屏幕（电脑屏幕）顶部的距离
+window.screenX              ：浏览器窗口距离屏幕（电脑屏幕）左侧的距离
+window.screenTop            ：浏览器窗口距离屏幕（电脑屏幕）顶部的距离
+window.screenLeft           ：浏览器窗口距离屏幕（电脑屏幕）左侧的距离
+
+window.screen 对象
+window.srceen.width         ：屏幕（电脑屏幕）的宽度
+window.screen.height        ：屏幕（电脑屏幕）的高度
+window.screen.availWidth    ：屏幕（电脑屏幕）的可用宽度
+window.screen.availHeight   ：屏幕（电脑屏幕）的可用高度
+window.screen.availLeft     ：除去可用宽度，浏览器窗口距离屏幕（电脑屏幕）左侧的距离
+window.screen.availTop      ：除去可用高度，浏览器窗口距离屏幕（电脑屏幕）顶部的距离
+
+document对象
+
+
+jQuery对象
