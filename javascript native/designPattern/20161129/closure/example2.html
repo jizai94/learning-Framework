@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包的经典应用(数据类型的判定)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Type = {};
+		for(var i = 0,type; type = ['String', 'Array', 'Number', 'Undefined', 'Object', 'Function', 'Boolean', 'Null'][i]; i++){
+			(function(type){
+				Type['is' + type] = function (obj) {
+					return Object.prototype.toString.call(obj) === '[object ' + type + ']';
+				}
+			})(type);
+		}
+		console.log(Type.isString('aaaaa'));
+		console.log(Type.isArray([]));
+		console.log(Type.isNumber(12));
+		console.log(Type.isUndefined(undefined));
+		console.log(Type.isObject({}));
+		console.log(Type.isFunction(function(){}));
+		console.log(Type.isBoolean(false));
+		console.log(Type.isNull(null));
+	</script>
+</body>
+</html>

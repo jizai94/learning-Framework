@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包的经典应用</title>
+</head>
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<script type="text/javascript">
+		var nodes = document.getElementsByTagName('div');
+		for(var i = 0; i < nodes.length; i++){
+			(function(i){
+				nodes[i].onclick = function () {
+					console.log(nodes[i].innerHTML);
+				};
+			})(i);
+		}
+	</script>
+</body>
+</html>
