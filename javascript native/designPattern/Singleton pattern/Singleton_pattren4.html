@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单例模式</title>
+</head>
+<body>
+	<!--单一职责原则：象创建对和管理单例的职责被分布在两个不同的方法中-->
+	<!--惰性单例模式：在合适的时候才创建对象，并且只创建唯一的一个。-->
+
+	<script>
+		/*管理单例的职责*/
+		var getSingle = function (fn) {
+			var result;
+			return function () {
+				return result || fn.apply(this, arguments);
+			}
+		};
+		var createLoginLayer = function () {
+			var div = document.createElement('div');
+			div.innerHTML = '我是登录浮窗';
+			div.style.display = 'none';
+			document.body.appendChild(div);
+			return div;
+		};
+		var createSingleLoginLayer = getSingle(createLoginLayer);
+		/*执行createSingleLoginLayer方法之后创建了唯一的对象实例，可以在需要的时候在创建，实现惰性单例的效果。*/
+		createSingleLoginLayer();
+	</script>
+
+</body>
+</html>
