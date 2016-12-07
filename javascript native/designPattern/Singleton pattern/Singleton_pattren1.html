@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单例模式1</title>
+</head>
+<body>
+
+	<!--单例模式1：通过 Singleton.getInstance 来获取 Singleton 类的唯一对象，这种方式相对简单，但有一个问题，
+	就是增加了这个类的“不透明性”， Singleton 类的使用者必须知道这是一个单例类，跟以往通过 new XXX 的方式来获取对象不同，
+	这里偏要使用 Singleton.getInstance 来获取对象。-->
+
+	<!--单例模式写法1-->
+	<script>
+		var Singleton1 = function (name) {
+			this.name = name;
+			this.instance = null;
+		};
+		Singleton1.prototype.getName = function () {
+			alert(this.name);
+		};
+		Singleton1.getInstance = function (name) {
+			if(!this.instance){
+				this.instance = new Singleton1(name);
+			}
+			return this.instance;
+		};
+		var a = Singleton1.getInstance('sven1');
+		var b = Singleton1.getInstance('sven2');
+		console.log(a === b);
+	</script>
+
+	<!--单例模式写法2-->
+	<script>
+		var Singleton2 = function (name) {
+			this.name = name;
+		};
+		Singleton2.prototype.getName = function () {
+			alert(this.name);
+		};
+		Singleton2.getInstance = (function () {
+			var instance = null;
+			return function (name) {
+				if(!instance){
+					instance = new Singleton2(name);
+				}
+				return instance;
+			}
+		})();
+		var c = Singleton2.getInstance('sven1');
+		var d = Singleton2.getInstance('sven2');
+		console.log(c === d);
+	</script>
+</body>
+</html>
