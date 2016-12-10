@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSX组件</title>
+	<script src="../libs/react.min.js"></script>
+	<script src="../libs/react-dom.min.js"></script>
+	<script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		/*组件1：HelloMessage*/
+		/*var HelloMessage = React.createClass({
+			render: function () {
+				return <h1>hello React</h1>;
+			}
+		});
+		ReactDOM.render(
+			<HelloMessage />,
+			document.getElementById('example')
+		);*/
+
+		/*组件2：带参数组件*/
+		/*var HelloMessage = React.createClass({
+			render: function () {
+				return <h1>Hello {this.props.name}</h1>
+			}
+		});
+		ReactDOM.render(
+			<HelloMessage name="React" />,
+			document.getElementById('example')
+		);*/
+
+		/*组件3：复合组件*/
+		var WebSite = React.createClass({
+			render: function () {
+				return (
+					<div>
+						<Name name = {this.props.name}/>
+						<Link site = {this.props.site}/>
+					</div>
+				)
+			}
+		});
+		var Name = React.createClass({
+			render: function () {
+				return <h1>{this.props.name}</h1>
+			}
+		});
+		var Link = React.createClass({
+			render: function () {
+				return <a href = {this.props.site}>{this.props.site}</a>
+			}
+		});
+		ReactDOM.render(
+			<WebSite name="百度" site="http://www.baidu.com"/>,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

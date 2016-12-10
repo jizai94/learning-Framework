@@ -1,0 +1,68 @@
+
+1.在React中常用的样式编写有两种方式：
+    1.通过在标签中添加一个className属性。
+    2.在标签中直接添加行内样式style：在React中行内样式不能用字符串形式，要用样式对象来表示，其中的key值是样式的驼峰命名。
+
+2.React的生命周期（从创建到消失的过程，以及在这个过程中状态state以及属性props是怎样流转的）
+
+3.react Components通过调用React.createClass({参数就是一个js的Obj})方法创建。
+  参数{}:
+  1.里面最重要的就是一个 key 就是:render，其return回来的类DOM结构就是这个Components被渲染出来是一个怎样的结构。
+    render: function(){
+        return <div>Hello {this.props.name}</div>
+        说明：括号里面是JS的表达式。表达式里面的this代表的是当前Components的实例;
+        props是一个集合，是一个当前Components使用时在其上添加的属性的集合;
+    }
+  2.getInitialState：初始化状态State,最终的执行结果是返回一个Obj的，就是初始化是的State。
+    getInitialState: function(){
+        return {
+            opacity: 1.0,
+            fontSize: '12px'
+        };
+    }
+  3.componentWillMount：Components Mount前
+    componentWillMount: function(){
+        alert('will');
+    }
+  4.componentDidMount：Components Mount后
+    componentDidMount: function(){
+        alert('did');
+    }
+
+  实例：
+  var Hello = React.createClass({
+      getInitialState: function(){
+         alert('init');
+    		return {
+    		    opacity: 1.0,
+    			fontSize: '12px'
+    		}
+      },
+      componentWillMount: function(){
+         alert('will');
+      },
+      render: function() {
+         return <div style={{opacity:this.state.opacity,fontSize:this.state.fontSize}}>Hello {this.props.name}</div>;
+      },
+      componentDidMount: function(){
+    	 alert('did');
+    	 var _self = this;
+    	 window.setTimeout(function(){
+    		_self.setState({
+    			opacity: 0.5,
+   				fontSize: '44px'
+   			});
+   		 }, 1000);
+      }
+  });
+
+  ReactDOM.render(
+    <Hello name="World" />,
+    document.getElementById('container')
+  );
+
+4.state的每次变化都会使得component从当前状态进入updating状态，从而重新render。
+
+5.React-Event-Listener:React事件的绑定使用的是驼峰式的书写方式，并且把处理方法写在定义组件的方法里面。
+
+6.ReactDOM.render ReactDOM.findDOMNode

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSX1</title>
+	<script src="../libs/react.min.js"></script>
+	<script src="../libs/react-dom.min.js"></script>
+	<script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		ReactDOM.render(
+			<div>
+				<h1>React教程</h1>
+				<p data-myattr = 'somevalue'>欢迎学习React，这是一个很不错的框架</p>
+			</div>,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

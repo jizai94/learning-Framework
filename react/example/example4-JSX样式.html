@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSX样式</title>
+	<script src="../libs/react.min.js"></script>
+	<script src="../libs/react-dom.min.js"></script>
+	<script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		var myStyle = {
+			fontSize: 100,
+			color: '#FF0000'
+		};
+		ReactDOM.render(
+			<h1 style = {myStyle}>React教程学习</h1>,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

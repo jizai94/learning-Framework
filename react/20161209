@@ -1,0 +1,19 @@
+
+1.React不是一个完整的MVC MVVM框架，其只负责view层
+
+2.React跟Web Components不冲突
+
+3.React的特点就是轻
+
+4.组件化的开发思路
+
+5.React通过虚拟DOM（Virtual DOM）和单项数据绑定使得React的渲染，响应非常快
+
+6.虚拟DOM（Virtual DOM）不仅仅带来性能上的提升，更是带来了组件化的开发思路
+
+7.React的应用场景：1.复杂场景下的高性能 2.重用组件库，组件组合
+
+8.JSX给我们带来的已达便利就是直接在JS中写类似DOM的结构，比原生的渲染快且方便的太多了。
+  除了可以些div这边原生的标签外，还可以使用自定义的标签，它们统称为react Components。
+  他们代表的不是一个真实的DOM节点，在React中看来，它们只是react Components的实例。
+  它们要呈现在页面上是通过调用ReactDOM.render(第一个参数是我们要渲染的react Components，第二个参数是要插入的容器Element)方法实现的。

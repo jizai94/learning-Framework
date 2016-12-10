@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSX数组</title>
+	<script src="../libs/react.min.js"></script>
+	<script src="../libs/react-dom.min.js"></script>
+	<script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		var arr = [
+			<h1>菜鸟教程</h1>,
+			<h2>学的不仅是技术，更是梦想！</h2>,
+		];
+		ReactDOM.render(
+			<div>{arr}</div>,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>
