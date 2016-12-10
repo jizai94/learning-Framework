@@ -1,0 +1,26 @@
+
+
+document.createDocumentFragment()(https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createDocumentFragment)
+
+document.querySelector()(https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector)
+document.querySelectorAll()(https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll)
+NodeList 对象(https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)
+
+:not(.input)选择器：所有不是类为input的元素
+
+css中的渐变：gradient
+
+弹性和模型：Flexbox
+
+媒体查询：@media
+
+less sass Compass
+
+popstate以及hashchange事件
+popstate:浏览器发生动作时，才会触发该事件，如用户点击浏览器的回退按钮(或者在Javascript代码中调用history.back())
+(https://developer.mozilla.org/zh-CN/docs/Web/Events/popstate)
+
+hashchange:事件会在页面URL中的片段标识符(第一个#号开始到末尾的所有字符,包括#号)发生改变时触发(事件绑定在window下)
+(https://developer.mozilla.org/zh-CN/docs/Web/Events/hashchange)
+
+Iconfont
